@@ -63,10 +63,33 @@ async function run() {
 }
 
 run().catch(console.dir)
+
 app.get("/", (req, res) => {
   res.send("Running Genius Car Mechanic Server")
+})
+
+app.get("/hello", (req, res) => {
+  res.send("hello updated here")
 })
 
 app.listen(port, () => {
   console.log("Runnig Genius On Port", port)
 })
+
+// -----One Time----//
+// create a heroku account
+// globally install heroku cli
+
+// ----- In every project-----//
+//  git init
+// .git ignore(node_modules, .env)
+// push everything to git
+//  make sure you have ("start" : "node index.js") script in package.json
+// make sure to put process.env.PORT in front of port number
+// herolu login
+// herouko git push main
+//
+
+//  after upadteing // // // // /
+// git add.,  git commit -m"", git push
+// git push heroku main
